@@ -566,6 +566,36 @@ class prep_osmm_water():
 
         return feat_elm
 
+class prep_openmap(prep_osgml):
+    """
+    Preperation class for OS VectorMap Local features.
+
+    """
+    def __init__(self, inputfile):
+        prep_osgml.__init__(self, inputfile)
+        self.feat_types = [
+            'Building',
+            'Building',
+            'Glasshouse',
+            'FunctionalSite',
+            'Important Building',
+            'Road',
+            'RoadTunnel',
+            'Roundabout',
+            'MotorwayJunction',
+            'Surface Water_Area',
+            'SurfaceWater_Line',
+            'TidalBoundary',
+            'TidalWater',
+            'Foreshore',
+            'RailwayTrack',
+            'RailwayStation',
+            'RailwayTunnel',
+            'ElectricityTransmissionLine',
+            'Woodland',
+            'NamedPlace'        ]
+
+
 
 class ObjectifyJSONEncoder(json.JSONEncoder):
     """ JSON encoder that can handle simple lxml objectify types,
